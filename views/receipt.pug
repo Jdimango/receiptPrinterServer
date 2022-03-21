@@ -1,0 +1,52 @@
+html
+  head
+    include includes/header.pug
+    title=`Receipt Printer`
+  body
+    .container
+      .row.text-center.justify-content-center.align-items-center
+        .col-xl-8.col-lg-10.col-md-12.col-sm-12
+          .receipt.text-center
+            header.receipt__header
+              p.receipt__title
+                | Send James Something
+              p.receipt__date 
+                | Literally anything
+            ul#ex1.nav.nav-tabs.mb-3(role='tablist')
+              li.nav-item(role='presentation')
+                a#ex1-tab-1.nav-link.active(data-mdb-toggle='tab' href='#ex1-tabs-1' role='tab' aria-controls='ex1-tabs-1' aria-selected='true') Image Upload
+              li.nav-item(role='presentation')
+                a#ex1-tab-2.nav-link(data-mdb-toggle='tab' href='#ex1-tabs-2' role='tab' aria-controls='ex1-tabs-2' aria-selected='false') Send Text
+              //- li.nav-item(role='presentation')
+              //-   a#ex1-tab-3.nav-link(data-mdb-toggle='tab' href='#ex1-tabs-3' role='tab' aria-controls='ex1-tabs-3' aria-selected='false') Tab 3
+
+            .row 
+              .col-12#content-1
+                form#image_upload(method='post' action='/upload' enctype='multipart/form-data')
+                  .mb-3
+                    label.form-label(for='formFile') Choose Photo
+                    input#formFile.form-control(type='file' name='file' required)
+                  .mb-3(style='display:none')
+                    label.form-label(for='username') Username
+                    input#username.form-control(type='text' name='username')
+                  .mb-3
+                    button(type='submit' name='upload') Upload
+              .col-12#content-2(style='display:none')
+                form#text_upload
+                  .mb-3
+                    label.form-label(for='textToPrint') Add some text
+                    textarea#textToPrint.form-control(rows='5' name='textToPrint')
+                  .mb-3
+                    button#text_upload_button(type='button' name='uploadText') Upload
+              //- .col-12#content-3
+              //-   | Test2
+            .row 
+              .col-12
+                #SamplePlayerDivID
+  include includes/footer.pug
+  
+
+
+              
+
+

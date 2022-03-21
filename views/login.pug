@@ -1,0 +1,28 @@
+html
+  head
+    include includes/header.pug
+    title=`Receipt Printer`
+  body
+    .container
+      .row.text-center.justify-content-center.align-items-center
+        .col-xl-8.col-lg-10.col-md-12.col-sm-12
+          .receipt.text-center
+            header.receipt__header
+              p.receipt__title
+                | Please Login
+              form#loginForm
+                .row.justify-content-center.text-center.align-items-center
+                  .mb-3.col-8
+                    label.form-label(for='username') Username
+                    input#username.form-control(type='text' aria-describedby='usernameHelp')
+                  .mb-3.col-8
+                    label.form-label(for='password') Password
+                    input#password.form-control(type='password')
+                  .mb-3.col-8
+                    button#loginButton.btn.btn-primary(type='button') Login
+              
+    include includes/loginfooter.pug
+
+              
+
+

@@ -1,0 +1,12 @@
+script(src='/script.js')
+
+script(type='text/javascript').
+    var options = {
+        width: '400',
+        height: '300',
+        channel: "jdimango",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["dimarcodevelopment.com", "shielded-crag-36267.herokuapp.com"]
+    };
+    var player = new Twitch.Player("SamplePlayerDivID", options);
+    player.setVolume(0.5);

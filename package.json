@@ -1,0 +1,27 @@
+{
+  "name": "paymypie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesCreateAndConnect/payMyPie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesCreateAndConnect/payMyPie/issues"
+  },
+  "homepage": "https://github.com/jamesCreateAndConnect/payMyPie#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "multer": "^1.4.4",
+    "node-thermal-printer": "^4.1.2",
+    "pug": "^3.0.2",
+    "qrcode": "^1.5.0"
+  }
+}
